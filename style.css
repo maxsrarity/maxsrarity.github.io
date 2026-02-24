@@ -114,6 +114,8 @@ header {
 
 /* Game Card */
 .game-card {
+    display: flex;
+    flex-direction: column;
     background-color: var(--card-bg);
     border-radius: 25px;
     padding: 20px;
@@ -161,6 +163,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: auto;
 }
 
 .btn {
