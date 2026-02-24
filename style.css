@@ -1,7 +1,7 @@
 /* --- COZY COLOR PALETTE --- */
 :root {
     --bg-color: #fdf8f5;     /* Soft cream background */
-    --text-color: #5d4037;   /* Warm wood brown */
+    --text-color: #986c5e;   /* Warm wood brown */
     --accent-color: #ffb7b2; /* Pastel peach */
     --btn-hover: #ff9e99;    /* Darker peach for hover */
     --card-bg: #ffffff;      /* Pure white for cards */
@@ -42,7 +42,8 @@ header {
 .logo {
     font-size: 28px;
     font-weight: 900;
-    color: #ff8a65;
+    color: #df6969;
+    opacity: 0.6;
     letter-spacing: 1px;
 }
 
@@ -53,16 +54,21 @@ header {
 }
 
 .nav-links a:hover {
-    color: #ff8a65;
+    color: #df6969;
 }
 
 /* --- HERO SECTION (GREETING) --- */
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background-color: #ffe0b2;
+    /* background-color: #ffe0b2; */
     border-radius: 0 0 50px 50px;
     margin-bottom: 50px;
+
+    background-image: linear-gradient(to right, #ffecd2, #fcb69f, #ffecd2);
+    opacity: 0.85;
+    background-size: 200% auto;
+    animation: pastelMove 5s linear infinite;
 }
 
 .hero h1 {
@@ -96,7 +102,7 @@ header {
     text-align: center;
     font-size: 18px;
     margin-bottom: 30px;
-    color: #6d4c41;
+    color: #9e9e9e;
 }
 
 .game-grid {
@@ -111,7 +117,7 @@ header {
     background-color: var(--card-bg);
     border-radius: 25px;
     padding: 20px;
-    width: 300px;
+    width: 250px;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
@@ -122,7 +128,7 @@ header {
 }
 
 .game-icon {
-    width: 80%;
+    width: 100%;
     height: 200px;
     background-color: #3f3f3f;
     border-radius: 50px;
@@ -135,12 +141,11 @@ header {
     font-weight: bold;
     color: #c8c8c8;
     margin-bottom: 5px;
-    /* text-transform: uppercase; */
     letter-spacing: 1px;
 }
 
 .game-title {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 800;
     margin-bottom: 10px;
 }
@@ -181,11 +186,11 @@ header {
 
 /* --- BACK TO TOP BUTTON --- */
 #backToTopBtn {
-    display: none; /* Ẩn nút đi lúc mới vào web */
-    position: fixed; /* Cố định vị trí khi cuộn trang */
-    bottom: 30px; /* Cách đáy màn hình 30px */
-    right: 30px; /* Cách mép phải 30px */
-    z-index: 99; /* Đảm bảo nút luôn nổi lên trên cùng */
+    display: none; 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px;
+    z-index: 99; 
     border: none;
     outline: none;
     background-color: var(--accent-color);
@@ -193,8 +198,8 @@ header {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Làm cho nút tròn xoe */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Đổ bóng cho đẹp */
+    border-radius: 50%; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); 
     transition: background-color 0.3s, transform 0.3s;
     display: flex;
     align-items: center;
@@ -203,10 +208,9 @@ header {
 
 #backToTopBtn:hover {
     background-color: var(--btn-hover);
-    transform: translateY(-5px); /* Hiệu ứng nảy lên nhẹ khi chỉ chuột vào */
+    transform: translateY(-5px);
 }
 
-/* Biểu tượng mũi tên (SVG) bên trong nút */
 #backToTopBtn svg {
     width: 24px;
     height: 24px;
@@ -263,7 +267,11 @@ header {
 .contact-section {
     max-width: 800px;
     margin: 0 auto 80px auto;
-    background-color: #ffe0b2; /* Màu nền vàng cam nhẹ nhàng, tiệp với phần Header */
+    /* background-color: #ffe0b2; */
+     background-image: linear-gradient(to right, #ffecd2, #fcb69f, #ffecd2);
+    opacity: 0.85;
+    background-size: 200% auto;
+    animation: pastelMove 5s linear infinite;
     padding: 40px 30px;
     border-radius: 30px;
     text-align: center;
@@ -273,7 +281,7 @@ header {
 .contact-section h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #e64a19; /* Màu cam đậm nổi bật */
+    color: #e64a19;
     font-weight: 900;
 }
 
@@ -287,7 +295,7 @@ header {
 .contact-btn {
     display: inline-block;
     background-color: #fa9373;
-    color: #fff;
+    color: #ffffff;
     padding: 12px 30px; 
     border-radius: 50px;
     font-weight: 800;
@@ -295,10 +303,11 @@ header {
     border: none;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
+
 }
 
 .contact-btn:hover {
-    background-color: #ff7043;
+    background-color: #df6969;
     transform: scale(1.05);
     color: #fff;
 }
@@ -312,18 +321,35 @@ footer {
     font-size: 14px;
 }
 
+footer p {
+    color: #9e9e9e;
+    margin-bottom: 10px;
+}
+
+/* --- FOOTER LINKS --- */
 .footer-links {
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .footer-links a {
-    margin: 0 10px;
-    color: #ff8a65;
-    font-weight: 700;
+    color: #efa8a0;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease; 
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+    text-decoration: none; 
+    color: #df6969;
+}
+
+.footer-divider {
+    color: #9e9e9e;
+    font-weight: lighter;
 }
 
 /* Responsive Design for Mobile */
@@ -334,5 +360,14 @@ footer {
     .policy-section {
         margin: 20px;
         padding: 30px 20px;
+    }
+}
+
+@keyframes pastelMove {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
     }
 }
