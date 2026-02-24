@@ -1,0 +1,338 @@
+/* --- COZY COLOR PALETTE --- */
+:root {
+    --bg-color: #fdf8f5;     /* Soft cream background */
+    --text-color: #5d4037;   /* Warm wood brown */
+    --accent-color: #ffb7b2; /* Pastel peach */
+    --btn-hover: #ff9e99;    /* Darker peach for hover */
+    --card-bg: #ffffff;      /* Pure white for cards */
+}
+
+/* --- GENERAL SETTINGS --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* --- HEADER (NAVIGATION BAR) --- */
+header {
+    background-color: var(--bg-color);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: #ff8a65;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff8a65;
+}
+
+/* --- HERO SECTION (GREETING) --- */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #ffe0b2;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #6d4c41;
+}
+
+/* --- GAMES SHOWCASE --- */
+.games-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.section-desc {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #6d4c41;
+}
+
+.game-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Game Card */
+.game-card {
+    background-color: var(--card-bg);
+    border-radius: 25px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+}
+
+.game-icon {
+    width: 80%;
+    height: 200px;
+    background-color: #3f3f3f;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.game-type {
+    font-size: 13px;
+    font-weight: bold;
+    color: #c8c8c8;
+    margin-bottom: 5px;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+}
+
+.game-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.game-desc {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #795548;
+}
+
+/* Store Buttons */
+.store-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.btn-ios {
+    background-color: #90caf9;
+}
+
+.btn-ios:hover { 
+    background-color: #64b5f6; 
+}
+
+/* --- BACK TO TOP BUTTON --- */
+#backToTopBtn {
+    display: none; /* Ẩn nút đi lúc mới vào web */
+    position: fixed; /* Cố định vị trí khi cuộn trang */
+    bottom: 30px; /* Cách đáy màn hình 30px */
+    right: 30px; /* Cách mép phải 30px */
+    z-index: 99; /* Đảm bảo nút luôn nổi lên trên cùng */
+    border: none;
+    outline: none;
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Làm cho nút tròn xoe */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Đổ bóng cho đẹp */
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#backToTopBtn:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-5px); /* Hiệu ứng nảy lên nhẹ khi chỉ chuột vào */
+}
+
+/* Biểu tượng mũi tên (SVG) bên trong nút */
+#backToTopBtn svg {
+    width: 24px;
+    height: 24px;
+    stroke: white;
+}
+
+/* --- POLICY & TERMS PAGES --- */
+.policy-section {
+    max-width: 800px;
+    margin: 40px auto 80px auto;
+    background-color: var(--card-bg);
+    padding: 40px 50px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.policy-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ff8a65;
+}
+
+.policy-section .last-updated {
+    text-align: center;
+    color: #9e9e9e;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.policy-section h2 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    border-bottom: 2px dashed #ffccbc;
+    padding-bottom: 5px;
+}
+
+.policy-section p, .policy-section ul {
+    margin-bottom: 15px;
+    color: #6d4c41;
+}
+
+.policy-section ul {
+    padding-left: 20px;
+}
+
+.policy-section li {
+    margin-bottom: 8px;
+}
+
+/* --- CONTACT BANNER SECTION --- */
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+    background-color: #ffe0b2; /* Màu nền vàng cam nhẹ nhàng, tiệp với phần Header */
+    padding: 40px 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #e64a19; /* Màu cam đậm nổi bật */
+    font-weight: 900;
+}
+
+.contact-section p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #6d4c41;
+    line-height: 1.8;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: #fa9373;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-btn:hover {
+    background-color: #ff7043;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-top: 2px dashed #ffccbc;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #ff8a65;
+    font-weight: 700;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    header { flex-direction: column; gap: 15px; }
+    .hero h1 { font-size: 32px; }
+    .game-grid { flex-direction: column; align-items: center; }
+    .policy-section {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+}

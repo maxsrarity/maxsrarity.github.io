@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Maxsrarity</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">maxsrarity</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#games">Games</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </header>
+
+    <section class="policy-section">
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Last updated: February 2026</p>
+
+        <p>Welcome to <strong>Maxsrarity</strong> (also referred to as "MaxsrarityGames", "we", "us", or "our"). These Terms of Service ("Terms") govern your access to and use of our mobile games, websites, and related services (collectively, the "Service").</p>
+        
+        <p>By downloading, accessing, or using our Service, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the Service.</p>
+
+        <h2>1. Eligibility and Access</h2>
+        <p>You must be at least 13 years old to access and use our games. If you are under the age of majority in your jurisdiction, you must have your parent or legal guardian's permission to use the Service. We reserve the right to suspend or terminate your access to the Service at any time, without notice, for conduct that we believe violates these Terms.</p>
+
+        <h2>2. Virtual Goods and In-App Purchases</h2>
+        <p>Our games may include virtual currencies (such as coins, gems, etc.) and virtual in-game items (collectively, "Virtual Goods") that can be purchased with real money. </p>
+        <ul>
+            <li><strong>No Real-World Value:</strong> Virtual Goods have no monetary value and cannot be redeemed for real money, goods, or other items of monetary value from us or any other party.</li>
+            <li><strong>All Sales are Final:</strong> Unless otherwise required by applicable law or the policies of the third-party app store (Google Play or Apple App Store), all purchases of Virtual Goods are final and <strong>non-refundable</strong>.</li>
+            <li><strong>License Only:</strong> When you purchase Virtual Goods, you are only buying a limited, personal, non-transferable, and revocable license to use them within the game. You do not own the Virtual Goods.</li>
+        </ul>
+
+        <h2>3. User Conduct and Rules</h2>
+        <p>To keep our games fun and fair for everyone, you agree NOT to do any of the following:</p>
+        <ul>
+            <li>Use cheats, exploits, automation software, bots, hacks, or any unauthorized third-party software designed to modify or interfere with the Service.</li>
+            <li>Attempt to gain unauthorized access to our servers, or disrupt/overburden our network.</li>
+            <li>Sell, trade, or transfer your account or Virtual Goods to anyone else.</li>
+        </ul>
+        <p>We reserve the right to ban your account and revoke any Virtual Goods if we find you violating these rules.</p>
+
+        <h2>4. Intellectual Property</h2>
+        <p>All rights, title, and interest in and to the Service (including without limitation any games, titles, computer code, themes, objects, characters, character names, stories, dialogue, artwork, animations, sounds, musical compositions, and audio-visual effects) are owned by Maxsrarity. You may not copy, distribute, modify, or create derivative works of our games without our express written permission.</p>
+
+        <h2>5. Third-Party Services</h2>
+        <p>The Service may contain links to third-party websites or services (such as ad networks like AdMob, Unity Ads, or payment gateways). We are not responsible for the content, privacy policies, or practices of any third-party websites or services.</p>
+
+        <h2>6. Disclaimer of Warranties and Limitation of Liability</h2>
+        <p>THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. MAXSRARITY MAKES NO WARRANTIES, EXPRESSED OR IMPLIED, AND HEREBY DISCLAIMS ALL OTHER WARRANTIES, INCLUDING WITHOUT LIMITATION, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
+        <p>In no event shall Maxsrarity be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in any way connected with the use of our Service.</p>
+
+        <h2>7. Changes to These Terms</h2>
+        <p>We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions about these Terms, please contact us at <strong>maxsrarity@gmail.com</strong>.</p>
+    </section>
+
+    <footer>
+        <p>© 2022 Maxsrarity Games</p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+    </footer>
+
+    <button id="backToTopBtn" title="Go to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTopBtn");
+        window.onscroll = function() { scrollFunction(); };
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "flex";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        }
+        backToTopBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+</body>
+</html>
