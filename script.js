@@ -50,27 +50,36 @@ function copyEmail() {
 }
 
 /* =========================================
-   SMOOTH SCROLL FOR ANCHOR LINKS
+    SMOOTH SCROLL & CLEAN URL LOGIC
 ========================================= */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault(); 
+        const href = this.getAttribute('href');
         
-        const targetId = this.getAttribute('href');
-        
-        if (targetId === '#') {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-            return;
-        }
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth'
-            });
+        if (href && href.startsWith('#')) {
+            e.preventDefault(); 
+            
+            if (href === '#') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            
+            //remove # from URL after scrolling
+            history.pushState(null, null, window.location.pathname);
         }
     });
+});
+
+// Handle the case when user directly visits a URL with a hash (e.g., from an external link)
+// wait for the page to load, then remove the hash from the URL
+window.addEventListener('load', function() {
+    if (window.location.hash) {
+        setTimeout(function() {
+            history.replaceState(null, null, window.location.pathname);
+        }, 100);
+    }
 });
