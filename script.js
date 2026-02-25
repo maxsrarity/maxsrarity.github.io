@@ -35,8 +35,8 @@ function copyEmail() {
 
     navigator.clipboard.writeText(email).then(function() {
         if (btn) {
-            btn.innerHTML = "Copied! ✨";
-            btn.style.backgroundColor = "#83c486ff"; 
+            btn.innerHTML = "Copied!";
+            btn.style.backgroundColor = "rgb(131, 187, 196)"; 
             
             setTimeout(function() {
                 btn.innerHTML = "maxsrarity@gmail.com";
